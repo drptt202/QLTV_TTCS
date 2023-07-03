@@ -17,18 +17,20 @@ namespace QuanLyThuVien
         public Main()
         {
             InitializeComponent();
-            label14.BackColor = label12.BackColor = label1.BackColor = System.Drawing.Color.Transparent;
+            label1.BackColor = System.Drawing.Color.Transparent;
             label5.BackColor = System.Drawing.Color.Transparent;
             label6.BackColor = System.Drawing.Color.Transparent;
             label7.BackColor = System.Drawing.Color.Transparent;
             label9.BackColor = System.Drawing.Color.Transparent;
             label8.BackColor = System.Drawing.Color.Transparent;
+            label11.BackColor = System.Drawing.Color.Transparent;
+
             lbTK.Hide();
             lbCV.Hide();
-            label12.Hide();
-            label14.Hide();
+            label11.Hide();
+
         }
-        public static string TenDN, MatKhau, Quyen;
+        public static string TenDN, MatKhau, Quyen,Ho,Ten;
 
         Class.clsDatabase cls = new QuanLyThuVien.Class.clsDatabase();
         private void button1_Click(object sender, EventArgs e)
@@ -38,6 +40,9 @@ namespace QuanLyThuVien
             if (TenDN != "")
             {
                 object Q = cls.layGiaTri("select CHUCVU from NHANVIEN where TENDANGNHAP='" + TenDN + "' and MatKhau='" + MatKhau + "'");
+                object H = cls.layGiaTri("select HO from NHANVIEN where TENDANGNHAP='" + TenDN + "' and MatKhau='" + MatKhau + "'");
+                object T = cls.layGiaTri("select TEN from NHANVIEN where TENDANGNHAP='" + TenDN + "' and MatKhau='" + MatKhau + "'");
+
                 if (Q == null)
                 {
                     MessageBox.Show("Sai tài khoản");
@@ -46,6 +51,8 @@ namespace QuanLyThuVien
                 {
                     MessageBox.Show("Đăng nhập thành công");
                     Quyen = Convert.ToString(Q);
+                    Ho = Convert.ToString(H);
+                    Ten = Convert.ToString(T);
                     if (Quyen == "Nhân viên")
                     {
                         groupBox2.Enabled = true;
@@ -104,8 +111,9 @@ namespace QuanLyThuVien
                     txtTenDangNhap.Text = "";
                     txtMatKhau.Text = "";
 
-                    lbTK.Text = TenDN;
-                    lbCV.Text = Quyen;
+                    lbTK.Text = "Tài khoản: " + TenDN;
+                    lbCV.Text = "Chức vụ:   " + Quyen;
+                    label11.Text = "Nhân viên: "+Ho + " " + Ten;
                     label10.Hide();
                     label2.Hide();
                     label3.Hide();
@@ -114,8 +122,8 @@ namespace QuanLyThuVien
                     button1.Hide();
                     lbCV.Show();
                     lbTK.Show();
-                    label12.Show();
-                    label14.Show();
+                    label11.Show();
+
                 }
             }
         }
@@ -340,8 +348,7 @@ namespace QuanLyThuVien
             đổiMậtKhẩuToolStripMenuItem.Enabled = false;
             lbTK.Hide();
             lbCV.Hide();
-            label12.Hide();
-            label14.Hide();
+            label11.Hide();
             label10.Show();
             label2.Show();
             label3.Show();

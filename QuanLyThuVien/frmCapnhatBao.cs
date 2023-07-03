@@ -67,7 +67,7 @@ namespace QuanLyThuVien
                 sua = 1;
                 button1.Enabled = false;
                 button3.Enabled = false;
-                cls.LoadData2DataGridView(dataGridView1, "  select * from VIEW_BAOTAPCHI where MABAO not in (select MABAO from KYXUATBAN where MAKYXB in (select MAKYXB from PHIEUMUONBAO))");
+                cls.LoadData2DataGridView(dataGridView1, " select * from VIEW_BAOTAPCHI where MABAO not in (select MABAO from KYXUATBAN where MAKYXB in (select MAKYXB from PHIEUMUONBAO))");
 
             }
             else
@@ -75,7 +75,7 @@ namespace QuanLyThuVien
                 try
                 {
 
-                string strUpdate = "EXEC SP_UPDATE_BAOTAPCHI @MaBao='" + mabao+"', @NamPhatHanh='" + txtNamphathanh.Text + "',@DinhKy='" + txtDinhky.Text + "',@MaNhaXB='" + txtManhaxuatban.Text + "',@MaTaiLieu='" + txtMatailieu.Text + "',@SoXuatBan='" + txtSoxuatban.Text + "',@SoLuongNhap='" + txtSoluongnhap.Text + "'";
+                string strUpdate = "EXEC SP_UPDATE_BAOTAPCHI @MaBao='" + mabao+"', @NamPhatHanh='" + txtNamphathanh.Text + "',@DinhKy=N'" + txtDinhky.Text + "',@MaNhaXB='" + txtManhaxuatban.Text + "',@MaTaiLieu='" + txtMatailieu.Text + "',@SoXuatBan='" + txtSoxuatban.Text + "',@SoLuongNhap='" + txtSoluongnhap.Text + "'";
 
                 cls.ThucThiSQLTheoKetNoi(strUpdate);
                 cls.LoadData2DataGridView(dataGridView1, "select *from VIEW_BAOTAPCHI");
@@ -154,6 +154,8 @@ namespace QuanLyThuVien
 
         private void button5_Click(object sender, EventArgs e)
         {
+            cls.LoadData2DataGridView(dataGridView1, "select *from VIEW_BAOTAPCHI");
+
             them = 0;
             sua = 0;
             xoa = 0;

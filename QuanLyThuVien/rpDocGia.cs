@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QuanLyThuVien
 {
@@ -21,6 +22,8 @@ namespace QuanLyThuVien
             cls.KetNoi();
         }
 
+        int thongke;
+        int tongso;
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -44,6 +47,35 @@ namespace QuanLyThuVien
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            cls.KetNoi();
+            if (radioButton1.Checked)
+            {
+                object S = cls.layGiaTri("select count(*) from DOCGIA");
+                object K = cls.layGiaTri("");
+                thongke = Convert.ToInt32(K);
+                tongso = Convert.ToInt32(S);
+            }
+            if (radioButton2.Checked)
+            {
+                object TS = cls.layGiaTri("select count(*) from DOCGIA");
+                object TK = cls.layGiaTri("");
+                thongke = Convert.ToInt32(TK);
+                tongso = Convert.ToInt32(TS);
+            }
+            if (radioButton3.Checked)
+            {
+
+                object TS = cls.layGiaTri("select count(*) from DOCGIA");
+                object TK = cls.layGiaTri("");
+                thongke = Convert.ToInt32(TK);
+                tongso = Convert.ToInt32(TS);
+            }
+            Chart chart = new Chart(thongke,tongso);
+            chart.Show();
         }
     }
 }

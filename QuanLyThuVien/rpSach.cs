@@ -18,9 +18,10 @@ namespace QuanLyThuVien
         Class.clsDatabase cls = new QuanLyThuVien.Class.clsDatabase();
         private void BCTinhTrangSach_Load(object sender, EventArgs e)
         {
-           cls.LoadData2DataGridView(dataGridView1, "Select*from VIEW_CUONSACH");      
+           cls.LoadData2DataGridView(dataGridView1, "Select*from VIEW_CUONSACH");
         }
-
+        int thongke;
+        int tongso;
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -30,11 +31,12 @@ namespace QuanLyThuVien
             }
             if (radioButton3.Checked)
             {
-                cls.LoadData2DataGridView(dataGridView1, "select vs.ID,STT,MALANXB,MASACH,TINHTRANG,TENTAILIEU,TACGIA,LANXUATBAN,NAMXUATBAN,KHOGIAY,SOTRANG,TEN,GIA,CODIACD, COUNT(*) as SOLANMUON from PHIEUMUONSACH pm  join VIEW_CUONSACH vs on pm.IDCUONSACH=vs.ID group by vs.ID,vs.ID,STT,MALANXB,MASACH,TINHTRANG,TENTAILIEU,TACGIA,LANXUATBAN,NAMXUATBAN,KHOGIAY,SOTRANG,TEN,GIA,CODIACD");
+                cls.LoadData2DataGridView(dataGridView1, "EXEC [dbo].[SP_STATISTICS_SOLUOTMUON_SACH]");
+
             }
             if (radioButton4.Checked)
             {
-                cls.LoadData2DataGridView(dataGridView1, "select vs.ID,STT,MALANXB,MASACH,TINHTRANG,TENTAILIEU,TACGIA,LANXUATBAN,NAMXUATBAN,KHOGIAY,SOTRANG,TEN,GIA,CODIACD, SOLANMUON ='0' from PHIEUMUONSACH pm join VIEW_CUONSACH vs on pm.IDCUONSACH!=vs.ID group by vs.ID,vs.ID,STT,MALANXB,MASACH,TINHTRANG,TENTAILIEU,TACGIA,LANXUATBAN,NAMXUATBAN,KHOGIAY,SOTRANG,TEN,GIA,CODIACD");
+                cls.LoadData2DataGridView(dataGridView1, "select *,SOLANMUON='0' from VIEW_CUONSACH where ID not in (select IDCUONSACH from PHIEUMUONSACH)");
             }
 
         }
@@ -49,6 +51,36 @@ namespace QuanLyThuVien
 
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            cls.KetNoi();
+            if (radioButton1.Checked)
+            {
+                object S = cls.layGiaTri("select count(*) from VIEW_CUONSACH");
+                object K = cls.layGiaTri("select count(*) from VIEW_CUONSACH where TINHTRANG != N'Tốt'");
+                thongke = Convert.ToInt32(K);
+                tongso = Convert.ToInt32(S);
+            }
+            if (radioButton3.Checked)
+            {
+                object TS = cls.layGiaTri("select count(*) from VIEW_CUONSACH");
+                object TK = cls.layGiaTri("select count(*) from PHIEUMUONSACH");
+                thongke = Convert.ToInt32(TK);
+                tongso = Convert.ToInt32(TS);
+            }
+            if (radioButton4.Checked)
+            {
+
+                object TS = cls.layGiaTri("select count(*) from VIEW_CUONSACH");
+                object TK = cls.layGiaTri("select count(*) from VIEW_CUONSACH where ID not in (select IDCUONSACH from PHIEUMUONSACH)");
+                thongke = Convert.ToInt32(TK);
+                tongso = Convert.ToInt32(TS);
+            }
+            Chart chart = new Chart(thongke,tongso);
+            chart.Show();
         }
     }
 }

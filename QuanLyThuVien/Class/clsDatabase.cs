@@ -67,6 +67,7 @@ namespace QuanLyThuVien.Class
             return obj;
             //Ket qua de dau ? - de trong obj
         }
+
         public void LoadData2Combobox(ComboBox cb, string strSelect)
         {
             //Kết nối

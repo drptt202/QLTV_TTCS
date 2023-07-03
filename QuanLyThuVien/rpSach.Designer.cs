@@ -38,6 +38,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.lb1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.radioButton3);
@@ -159,6 +161,17 @@
             this.dataGridView1.Size = new System.Drawing.Size(1014, 325);
             this.dataGridView1.TabIndex = 20;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(694, 97);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 32);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "Biểu đồ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // rpSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -195,5 +208,6 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button button1;
         private DataGridView dataGridView1;
+        private Button button2;
     }
 }

@@ -32,7 +32,8 @@ namespace QuanLyThuVien
             {
                 them = 1;
                 button2.Enabled = button3.Enabled = false;
-                txtMasach.Text = txtMatacgia.Text = txtMatailieu.Text = txtTentailieu.Text = "";
+                label4.Text = txtMasach.Text = txtMatacgia.Text = txtMatailieu.Text = txtTentailieu.Text = "";
+                button5.Visible = false;
                 for (int i = 0; i < clTentacgia.Items.Count; i++)
                 {
                     clTentacgia.SetItemChecked(i, false);
@@ -85,22 +86,42 @@ namespace QuanLyThuVien
         string malanxb = "";
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            for (int i = 0; i < clTentacgia.Items.Count; i++)
+            {
+                clTentacgia.SetItemChecked(i, false);
+            }
             try
             {
                 string ten = "";
-                txtMasach.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                txtTentailieu.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 ten = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-                for (int i = 0; i < clTentacgia.Items.Count; i++)
+
+                string[] arrListStr;
+                if (ten.IndexOf(",") >0)
                 {
-                    if (clTentacgia.Items[i].ToString() == ten)
+                    arrListStr = ten.Split(", ");
+                    for (int j = 0; j < arrListStr.Length ; j++)
                     {
-                        clTentacgia.SetItemChecked(i, true);
+                        for (int i = 0; i < clTentacgia.Items.Count; i++)
+                        {
+                            if (clTentacgia.Items[i].ToString() == arrListStr[j])
+                            {
+                                clTentacgia.SetItemChecked(i, true);
+                            }
+                        }
+                    }
+                }else
+                {
+                    for (int i = 0; i < clTentacgia.Items.Count; i++)
+                    {
+                        if (clTentacgia.Items[i].ToString() == ten)
+                        {
+                            clTentacgia.SetItemChecked(i, true);
+                        }
                     }
                 }
-
-
-
+                txtMasach.Text = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtTentailieu.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                
                 clTentacgia.Items.ToString();
 
             }
@@ -164,8 +185,14 @@ namespace QuanLyThuVien
 
         private void button4_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < clTentacgia.Items.Count; i++)
+            {
+                clTentacgia.SetItemChecked(i, false);
+            }
             them = sua = 0;
             button1.Enabled = button2.Enabled = button3.Enabled = true;
+            label4.Text = txtMasach.Text = txtMatacgia.Text = txtMatailieu.Text = txtTentailieu.Text = "";
+            button5.Visible = false;
         }
 
         private void button6_Click(object sender, EventArgs e)

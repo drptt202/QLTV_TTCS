@@ -57,7 +57,6 @@
             this.txtGia = new System.Windows.Forms.TextBox();
             this.txtTennxb = new System.Windows.Forms.TextBox();
             this.txtSotrang = new System.Windows.Forms.TextBox();
-            this.txtTinhtrang = new System.Windows.Forms.TextBox();
             this.txtMasach = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -78,6 +77,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtTinhtrang = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -317,6 +317,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtTinhtrang);
             this.groupBox3.Controls.Add(this.txtTacgia);
             this.groupBox3.Controls.Add(this.txtTentailieu);
             this.groupBox3.Controls.Add(this.txtMalanxuatban);
@@ -326,7 +327,6 @@
             this.groupBox3.Controls.Add(this.txtGia);
             this.groupBox3.Controls.Add(this.txtTennxb);
             this.groupBox3.Controls.Add(this.txtSotrang);
-            this.groupBox3.Controls.Add(this.txtTinhtrang);
             this.groupBox3.Controls.Add(this.txtMasach);
             this.groupBox3.Controls.Add(this.label13);
             this.groupBox3.Controls.Add(this.label14);
@@ -425,13 +425,6 @@
             this.txtSotrang.Name = "txtSotrang";
             this.txtSotrang.Size = new System.Drawing.Size(193, 27);
             this.txtSotrang.TabIndex = 34;
-            // 
-            // txtTinhtrang
-            // 
-            this.txtTinhtrang.Location = new System.Drawing.Point(248, 171);
-            this.txtTinhtrang.Name = "txtTinhtrang";
-            this.txtTinhtrang.Size = new System.Drawing.Size(193, 27);
-            this.txtTinhtrang.TabIndex = 33;
             // 
             // txtMasach
             // 
@@ -615,6 +608,14 @@
             this.label3.Size = new System.Drawing.Size(0, 20);
             this.label3.TabIndex = 3;
             // 
+            // txtTinhtrang
+            // 
+            this.txtTinhtrang.FormattingEnabled = true;
+            this.txtTinhtrang.Location = new System.Drawing.Point(251, 172);
+            this.txtTinhtrang.Name = "txtTinhtrang";
+            this.txtTinhtrang.Size = new System.Drawing.Size(190, 28);
+            this.txtTinhtrang.TabIndex = 46;
+            // 
             // frmTimkiemSach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -676,7 +677,6 @@
         private TextBox txtGia;
         private TextBox txtTennxb;
         private TextBox txtSotrang;
-        private TextBox txtTinhtrang;
         private TextBox txtMasach;
         private Label label13;
         private Label label14;
@@ -695,5 +695,6 @@
         private Label label9;
         private Label label8;
         private Label label7;
+        private ComboBox txtTinhtrang;
     }
 }

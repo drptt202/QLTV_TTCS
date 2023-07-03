@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5G6GEltwtMABBm/w408/9b1KZyRQyAphxZbWe2gD3u+uyGxzLdQTY46LK2bUEZBxD5atwcdIrZYc0ANX/t84oQ==",
+  "dgSpecHash": "92LGXIihOf+tNXbxlYTlskA8q2SeGgSaT+ysVAJJzN1MbmI4N12HHZ4NQJ4YW+PoI0kuTVQKQIo64ty9ffWHbA==",
   "success": true,
   "projectFilePath": "C:\\Users\\buzzl\\Desktop\\ttcs1\\QuanLyThuVien\\QuanLyThuVien\\QuanLyThuVien.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,8 @@
     "C:\\Users\\buzzl\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\buzzl\\.nuget\\packages\\system.data.sqlclient\\4.8.5\\system.data.sqlclient.4.8.5.nupkg.sha512",
     "C:\\Users\\buzzl\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\buzzl\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
+    "C:\\Users\\buzzl\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
+    "C:\\Users\\buzzl\\.nuget\\packages\\winforms.datavisualization\\1.8.0\\winforms.datavisualization.1.8.0.nupkg.sha512"
   ],
   "logs": []
 }

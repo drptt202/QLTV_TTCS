@@ -25,6 +25,7 @@ namespace QuanLyThuVien
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {
            label4.Text = comboBox1.Text + ":";
+            cls.LoadData2Combobox(txtDinhky, "select DINHKY TINHTRANG from VIEW_BAOTAPCHI");
         }
 
         private void button1_Click_1(object sender, EventArgs e)

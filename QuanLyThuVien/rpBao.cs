@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace QuanLyThuVien
 {
@@ -20,7 +21,6 @@ namespace QuanLyThuVien
         private void BCBao_Load(object sender, EventArgs e)
         {
             cls.LoadData2DataGridView(dataGridView1, "Select*from VIEW_BAOTAPCHI");
-
         }
 
         private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -28,6 +28,8 @@ namespace QuanLyThuVien
 
         }
 
+        int thongke;
+        int tongso;
         private void button1_Click(object sender, EventArgs e)
         {
             if (radioButton1.Checked)
@@ -37,11 +39,7 @@ namespace QuanLyThuVien
             }
             if (radioButton3.Checked)
             {
-                cls.LoadData2DataGridView(dataGridView1, "select*from VIEW_BAOTAPCHI where SOLUONGNHAP >50");
-            }
-            if (radioButton4.Checked)
-            {
-                cls.LoadData2DataGridView(dataGridView1, "select*from VIEW_BAOTAPCHI where SOLUONGNHAP <=50");
+                cls.LoadData2DataGridView(dataGridView1, "EXEC [dbo].[SP_STATISTICS_SOLUOTMUON_BAO]");
             }
             
         }
@@ -50,5 +48,21 @@ namespace QuanLyThuVien
         {
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+                cls.KetNoi();
+                object S = cls.layGiaTri("select sum(SOLUONGNHAP) from VIEW_BAOTAPCHI");
+                object K = cls.layGiaTri("select sum(SOLUONGCON) from VIEW_BAOTAPCHI");
+                thongke = Convert.ToInt32(K);
+                tongso = Convert.ToInt32(S);
+
+            Chart chart = new Chart(thongke,tongso);
+            chart.Show();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

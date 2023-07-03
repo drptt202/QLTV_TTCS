@@ -19,6 +19,7 @@ namespace QuanLyThuVien
         private void timkiem_Load(object sender, EventArgs e)
         {
             cls.KetNoi();
+            cls.LoadData2Combobox(txtTinhtrang, "select DISTINCT TINHTRANG from VIEW_CUONSACH");
         }
 
         private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
@@ -28,7 +29,7 @@ namespace QuanLyThuVien
 
         private void button1_Click(object sender, EventArgs e)
         {
-            cls.LoadData2DataGridView(dataGridView1, "select*from VIEW_CUONSACH where " + comboBox1.Text + " like'%" + textBox1.Text + "%'");
+            cls.LoadData2DataGridView(dataGridView1, "select*from VIEW_CUONSACH where " + comboBox1.Text + " like N'%" + textBox1.Text + "%'");
         }
 
         private void button2_Click(object sender, EventArgs e)

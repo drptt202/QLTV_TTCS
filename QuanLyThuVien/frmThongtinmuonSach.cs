@@ -33,6 +33,13 @@ namespace QuanLyThuVien
             {
                 them = 1;
                 button2.Enabled = button3.Enabled = false;
+                txtMamuon.Text = 
+                txtNgaymuon.Text = 
+                txtNgaytra.Text = 
+                txtSothedocgia.Text = 
+                txtIDcuonsach.Text =
+                txtManhanvienlap.Text = "";
+                checkBox1.Checked = false;
             }
             else
             {
@@ -135,6 +142,14 @@ namespace QuanLyThuVien
         {
             them = sua = 0;
             button1.Enabled = button2.Enabled = button3.Enabled = true;
+
+            txtMamuon.Text =
+            txtNgaymuon.Text =
+            txtNgaytra.Text =
+            txtSothedocgia.Text =
+            txtIDcuonsach.Text =
+            txtManhanvienlap.Text = "";
+            checkBox1.Checked = false;
         }
     }
 }

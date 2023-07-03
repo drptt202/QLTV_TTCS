@@ -31,10 +31,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.lbCV = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.lbTK = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -98,10 +97,9 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.lbCV);
-            this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.lbTK);
-            this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -115,43 +113,35 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(143, 120);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(97, 22);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "Nhân viên:";
+            // 
             // lbCV
             // 
             this.lbCV.AutoSize = true;
             this.lbCV.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCV.Location = new System.Drawing.Point(283, 198);
+            this.lbCV.Location = new System.Drawing.Point(143, 196);
             this.lbCV.Name = "lbCV";
-            this.lbCV.Size = new System.Drawing.Size(0, 22);
+            this.lbCV.Size = new System.Drawing.Size(86, 22);
             this.lbCV.TabIndex = 37;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(143, 195);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 22);
-            this.label12.TabIndex = 36;
-            this.label12.Text = "Chức vụ:";
+            this.lbCV.Text = "Chức vụ:";
             // 
             // lbTK
             // 
             this.lbTK.AutoSize = true;
             this.lbTK.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTK.Location = new System.Drawing.Point(283, 142);
+            this.lbTK.Location = new System.Drawing.Point(143, 158);
             this.lbTK.Name = "lbTK";
-            this.lbTK.Size = new System.Drawing.Size(0, 22);
+            this.lbTK.Size = new System.Drawing.Size(96, 22);
             this.lbTK.TabIndex = 35;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(143, 142);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 22);
-            this.label14.TabIndex = 34;
-            this.label14.Text = "Tài khoản:";
+            this.lbTK.Text = "Tài khoản:";
             // 
             // label10
             // 
@@ -730,6 +720,7 @@
         private Label lbTK;
         private Label label14;
         private ToolStripMenuItem đăngXuấtToolStripMenuItem;
+        private Label label11;
     }
 }
 

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,8 +43,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.radioButton4);
             this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Location = new System.Drawing.Point(16, 17);
@@ -54,6 +54,18 @@
             this.groupBox1.Size = new System.Drawing.Size(1014, 257);
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(694, 96);
+            this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 32);
+            this.button2.TabIndex = 30;
+            this.button2.Text = "Biểu đồ";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -66,28 +78,16 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(396, 48);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(133, 24);
-            this.radioButton4.TabIndex = 27;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Lô nhỏ <=50 tờ";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(216, 48);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(119, 24);
+            this.radioButton3.Size = new System.Drawing.Size(114, 24);
             this.radioButton3.TabIndex = 26;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Lô lớn >50 tờ";
+            this.radioButton3.Text = "Số lần mượn";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton1
@@ -173,12 +173,12 @@
 
         private GroupBox groupBox1;
         private Button button1;
-        private RadioButton radioButton4;
         private RadioButton radioButton3;
         private RadioButton radioButton1;
         private Label label5;
         private Label label4;
         private Label lb1;
         private DataGridView dataGridView1;
+        private Button button2;
     }
 }

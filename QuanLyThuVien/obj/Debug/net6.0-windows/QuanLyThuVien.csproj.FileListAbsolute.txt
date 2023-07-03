@@ -47,3 +47,6 @@ C:\Users\buzzl\Desktop\ttcs1\QuanLyThuVien\QuanLyThuVien\obj\Debug\net6.0-window
 C:\Users\buzzl\Desktop\ttcs1\QuanLyThuVien\QuanLyThuVien\obj\Debug\net6.0-windows\QuanLyThuVien.frmXemcuonsach.resources
 C:\Users\buzzl\Desktop\ttcs1\QuanLyThuVien\QuanLyThuVien\obj\Debug\net6.0-windows\QuanLyThuVien.frmXemlanxuatban.resources
 C:\Users\buzzl\Desktop\ttcs1\QuanLyThuVien\QuanLyThuVien\obj\Debug\net6.0-windows\QuanLyThuVien.frmThongtinmuonSach.resources
+C:\Users\buzzl\Desktop\ttcs1\QuanLyThuVien\QuanLyThuVien\bin\Debug\net6.0-windows\WinForms.DataVisualization.Utilities.dll
+C:\Users\buzzl\Desktop\ttcs1\QuanLyThuVien\QuanLyThuVien\bin\Debug\net6.0-windows\WinForms.DataVisualization.dll
+C:\Users\buzzl\Desktop\ttcs1\QuanLyThuVien\QuanLyThuVien\obj\Debug\net6.0-windows\QuanLyThuVien.Chart.resources
