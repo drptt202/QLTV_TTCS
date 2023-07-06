@@ -115,8 +115,10 @@
             this.clTentacgia.Name = "clTentacgia";
             this.clTentacgia.Size = new System.Drawing.Size(207, 70);
             this.clTentacgia.TabIndex = 43;
+            this.clTentacgia.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.clTentacgia_ItemCheck);
             this.clTentacgia.Click += new System.EventHandler(this.clTentacgia_Click);
             this.clTentacgia.SelectedIndexChanged += new System.EventHandler(this.clTentacgia_SelectedIndexChanged);
+            this.clTentacgia.SelectedValueChanged += new System.EventHandler(this.clTentacgia_SelectedValueChanged);
             // 
             // label4
             // 

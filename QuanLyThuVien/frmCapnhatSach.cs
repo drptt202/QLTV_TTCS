@@ -146,7 +146,7 @@ namespace QuanLyThuVien
 
         private void button5_Click(object sender, EventArgs e)
         {
-            frmXemlanxuatban xem = new frmXemlanxuatban(txtTentailieu.Text);
+            frmXemlanxuatban xem = new frmXemlanxuatban(txtTentailieu.Text,txtMasach.Text);
             xem.Show();
         }
 
@@ -205,6 +205,14 @@ namespace QuanLyThuVien
         {
             frmCapnhatTG them = new frmCapnhatTG();
             them.Show();
+        }
+
+        private void clTentacgia_SelectedValueChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void clTentacgia_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
         }
     }
 }
