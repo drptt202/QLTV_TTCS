@@ -40,7 +40,7 @@ namespace QuanLyThuVien
             {
                 check = false;
             }
-            label1.Text = "Xem danh sách cuốn sách của lần xuất bản " + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            label1.Text = "Xem danh sách cuốn sách của kỳ xuất bản " + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             button1.Visible = true;
             
             malxb = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
