@@ -34,7 +34,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -72,10 +71,10 @@
             this.radioButton3.Location = new System.Drawing.Point(128, 183);
             this.radioButton3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(140, 24);
+            this.radioButton3.Size = new System.Drawing.Size(173, 24);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Độc giả chưa trả";
+            this.radioButton3.Text = "Độc giả chưa trả sách";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton2
@@ -84,10 +83,10 @@
             this.radioButton2.Location = new System.Drawing.Point(128, 137);
             this.radioButton2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(196, 24);
+            this.radioButton2.Size = new System.Drawing.Size(229, 24);
             this.radioButton2.TabIndex = 1;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Độc giả chưa từng mượn";
+            this.radioButton2.Text = "Độc giả chưa từng mượn sách";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton1
@@ -96,16 +95,15 @@
             this.radioButton1.Location = new System.Drawing.Point(128, 92);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(230, 24);
+            this.radioButton1.Size = new System.Drawing.Size(263, 24);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Số lần mượn của từng độc giả";
+            this.radioButton1.Text = "Số lần mượn sách của từng độc giả";
             this.radioButton1.UseVisualStyleBackColor = true;
             this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Location = new System.Drawing.Point(822, 12);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -114,17 +112,6 @@
             this.groupBox2.Size = new System.Drawing.Size(214, 311);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(57, 139);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 32);
-            this.button2.TabIndex = 30;
-            this.button2.Text = "Biểu đồ";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // dataGridView1
             // 
@@ -183,6 +170,5 @@
         private Label label5;
         private DataGridView dataGridView2;
         private DataGridView dataGridView3;
-        private Button button2;
     }
 }

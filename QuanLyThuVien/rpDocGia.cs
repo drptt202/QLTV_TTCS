@@ -30,17 +30,17 @@ namespace QuanLyThuVien
             {
                 dataGridView1.Enabled = true;
 
-                cls.LoadData2DataGridView(dataGridView1, "select dg.SOTHEDOCGIA,dg.NGAYCAPTHE,dg.HO,dg.TEN, COUNT(*) as SOLANMUON from DOCGIA dg join PHIEUMUON pm on pm.SOTHEDOCGIA=dg.SOTHEDOCGIA group by dg.SOTHEDOCGIA,dg.NGAYCAPTHE,dg.HO,dg.TEN ");
+                cls.LoadData2DataGridView(dataGridView1, "select dg.SOTHEDOCGIA,dg.NGAYCAPTHE,dg.HO,dg.TEN, COUNT(*) as SOLANMUON from DOCGIA dg join PHIEUMUONSACH pm on pm.SOTHEDOCGIA=dg.SOTHEDOCGIA group by dg.SOTHEDOCGIA,dg.NGAYCAPTHE,dg.HO,dg.TEN ");
             }
             if (radioButton2.Checked)
             {
 
-                cls.LoadData2DataGridView(dataGridView1,"  select * from DOCGIA where SOTHEDOCGIA not in (select SOTHEDOCGIA from PHIEUMUON)");
+                cls.LoadData2DataGridView(dataGridView1,"  select * from DOCGIA where SOTHEDOCGIA not in (select SOTHEDOCGIA from PHIEUMUONSACH)");
             }
             if (radioButton3.Checked)
             {
 
-                cls.LoadData2DataGridView(dataGridView1, "select dg.SOTHEDOCGIA, dg.NGAYCAPTHE, dg.HO, dg.TEN, dg.NGHENGHIEP, dg.PHAI, pm.TRANGTHAITRA from DOCGIA dg join PHIEUMUON pm on dg.SOTHEDOCGIA =pm.SOTHEDOCGIA and pm.TRANGTHAITRA=0");
+                cls.LoadData2DataGridView(dataGridView1, "select dg.SOTHEDOCGIA, dg.NGAYCAPTHE, dg.HO, dg.TEN, dg.NGHENGHIEP, dg.PHAI, pm.TRANGTHAITRA from DOCGIA dg join PHIEUMUONSACH pm on dg.SOTHEDOCGIA =pm.SOTHEDOCGIA and pm.TRANGTHAITRA=0");
             }
         }
 
@@ -49,33 +49,6 @@ namespace QuanLyThuVien
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            cls.KetNoi();
-            if (radioButton1.Checked)
-            {
-                object S = cls.layGiaTri("select count(*) from DOCGIA");
-                object K = cls.layGiaTri("");
-                thongke = Convert.ToInt32(K);
-                tongso = Convert.ToInt32(S);
-            }
-            if (radioButton2.Checked)
-            {
-                object TS = cls.layGiaTri("select count(*) from DOCGIA");
-                object TK = cls.layGiaTri("");
-                thongke = Convert.ToInt32(TK);
-                tongso = Convert.ToInt32(TS);
-            }
-            if (radioButton3.Checked)
-            {
-
-                object TS = cls.layGiaTri("select count(*) from DOCGIA");
-                object TK = cls.layGiaTri("");
-                thongke = Convert.ToInt32(TK);
-                tongso = Convert.ToInt32(TS);
-            }
-            Chart chart = new Chart(thongke,tongso);
-            chart.Show();
-        }
+        
     }
 }
