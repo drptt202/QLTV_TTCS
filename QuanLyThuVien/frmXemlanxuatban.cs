@@ -31,27 +31,32 @@ namespace QuanLyThuVien
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            bool check = false;
-            if (dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString() == "True")
+
+            try
             {
-                check = true;
+                bool check = false;
+                if (dataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString() == "True")
+                {
+                    check = true;
+                }
+                else
+                {
+                    check = false;
+                }
+                label1.Text = "Xem danh sách cuốn sách của lần xuất bản " + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                button1.Visible = true;
+
+                malxb = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txtGia.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+                txtKhogiay.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+                txtTennhaxuatban.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+                txtLanxuatban.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtMasach.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtNamxuatban.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+                txtSotrang.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+                checkBox1.Checked = check;
             }
-            else
-            {
-                check = false;
-            }
-            label1.Text = "Xem danh sách cuốn sách của kỳ xuất bản " + dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            button1.Visible = true;
-            
-            malxb = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-            txtGia.Text = dataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-            txtKhogiay.Text = dataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtTennhaxuatban.Text = dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtLanxuatban.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtMasach.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtNamxuatban.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtSotrang.Text = dataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-            checkBox1.Checked = check;
+            catch { }
         }
 
         private void button1_Click(object sender, EventArgs e)

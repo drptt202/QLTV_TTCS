@@ -106,6 +106,7 @@ namespace QuanLyThuVien
                     sua = 1;
                     button1.Enabled = false;
                     button3.Enabled = false;
+                    txtTinhtrang.Visible = label9.Visible = true;
                 }
                 else
                 {
@@ -123,10 +124,16 @@ namespace QuanLyThuVien
 
                     string strUpdate = "EXEC [dbo].[SP_UPDATE_PHIEUMUONSACH] @MaMuon='" + txtMamuon.Text+"', @NgayMuon='" + txtNgaymuon.Text + "',@NgayTra='" + txtNgaytra.Text + "',@TrangThaiTra='" + check + "',@SoTheDocGia='" + txtSothedocgia.Text + "',@IDCuonSach='" + txtIDcuonsach.Text + "',@MaNhanVienLap='" + txtManhanvienlap.Text + "'";
                     cls.ThucThiSQLTheoKetNoi(strUpdate);
-                        cls.LoadData2DataGridView(dataGridView1, "select *from PHIEUMUONSACH");
-                        button1.Enabled = true;
-                        button3.Enabled = true;
-                        MessageBox.Show("Sửa thành công");
+                    cls.LoadData2DataGridView(dataGridView1, "select *from PHIEUMUONSACH");
+
+                    string strUpdate1 = "EXEC [dbo].[SP_UPDATE_CUONSACH] @ID = '" + txtIDcuonsach.Text + "', @TINHTRANG = N'" + txtTinhtrang.Text + "'";
+                    cls.ThucThiSQLTheoKetNoi(strUpdate1);
+
+                    button1.Enabled = true;
+                    button3.Enabled = true;
+                    MessageBox.Show("Sửa thành công");
+                    txtTinhtrang.Visible = label9.Visible = false;
+
                     sua = 0;
                     }
                     catch { MessageBox.Show("Sửa thất bại"); };

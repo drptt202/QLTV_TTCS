@@ -155,7 +155,7 @@ namespace QuanLyThuVien
         {
             cls.LoadData2CTextbox(txtMatailieu, "select MATAILIEU from TAILIEU where TENTAILIEU=N'" + txtTentailieu.Text + "'");
 
-            label4.Text = "Xem kỳ xuất bản của " + txtTentailieu.Text;
+            label4.Text = "Xem các lần xuất bản của " + txtTentailieu.Text;
             button5.Visible = true;
         }
         private void clTentacgia_Click(object sender, EventArgs e)

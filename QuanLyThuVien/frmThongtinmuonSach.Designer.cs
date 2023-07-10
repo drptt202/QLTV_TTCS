@@ -30,6 +30,9 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtManhanvienlap = new System.Windows.Forms.ComboBox();
+            this.txtIDcuonsach = new System.Windows.Forms.ComboBox();
+            this.txtSothedocgia = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,9 +51,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtManhanvienlap = new System.Windows.Forms.ComboBox();
-            this.txtIDcuonsach = new System.Windows.Forms.ComboBox();
-            this.txtSothedocgia = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtTinhtrang = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -70,6 +72,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtTinhtrang);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtManhanvienlap);
             this.groupBox1.Controls.Add(this.txtIDcuonsach);
             this.groupBox1.Controls.Add(this.txtSothedocgia);
@@ -92,6 +96,30 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập đầy đủ các thông tin";
+            // 
+            // txtManhanvienlap
+            // 
+            this.txtManhanvienlap.FormattingEnabled = true;
+            this.txtManhanvienlap.Location = new System.Drawing.Point(549, 103);
+            this.txtManhanvienlap.Name = "txtManhanvienlap";
+            this.txtManhanvienlap.Size = new System.Drawing.Size(212, 28);
+            this.txtManhanvienlap.TabIndex = 45;
+            // 
+            // txtIDcuonsach
+            // 
+            this.txtIDcuonsach.FormattingEnabled = true;
+            this.txtIDcuonsach.Location = new System.Drawing.Point(549, 66);
+            this.txtIDcuonsach.Name = "txtIDcuonsach";
+            this.txtIDcuonsach.Size = new System.Drawing.Size(212, 28);
+            this.txtIDcuonsach.TabIndex = 44;
+            // 
+            // txtSothedocgia
+            // 
+            this.txtSothedocgia.FormattingEnabled = true;
+            this.txtSothedocgia.Location = new System.Drawing.Point(549, 27);
+            this.txtSothedocgia.Name = "txtSothedocgia";
+            this.txtSothedocgia.Size = new System.Drawing.Size(212, 28);
+            this.txtSothedocgia.TabIndex = 43;
             // 
             // label6
             // 
@@ -280,29 +308,25 @@
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // txtManhanvienlap
+            // label9
             // 
-            this.txtManhanvienlap.FormattingEnabled = true;
-            this.txtManhanvienlap.Location = new System.Drawing.Point(549, 103);
-            this.txtManhanvienlap.Name = "txtManhanvienlap";
-            this.txtManhanvienlap.Size = new System.Drawing.Size(212, 28);
-            this.txtManhanvienlap.TabIndex = 45;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(458, 142);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 20);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Tình trạng :";
+            this.label9.Visible = false;
             // 
-            // txtIDcuonsach
+            // txtTinhtrang
             // 
-            this.txtIDcuonsach.FormattingEnabled = true;
-            this.txtIDcuonsach.Location = new System.Drawing.Point(549, 66);
-            this.txtIDcuonsach.Name = "txtIDcuonsach";
-            this.txtIDcuonsach.Size = new System.Drawing.Size(212, 28);
-            this.txtIDcuonsach.TabIndex = 44;
-            // 
-            // txtSothedocgia
-            // 
-            this.txtSothedocgia.FormattingEnabled = true;
-            this.txtSothedocgia.Location = new System.Drawing.Point(549, 27);
-            this.txtSothedocgia.Name = "txtSothedocgia";
-            this.txtSothedocgia.Size = new System.Drawing.Size(212, 28);
-            this.txtSothedocgia.TabIndex = 43;
+            this.txtTinhtrang.Location = new System.Drawing.Point(549, 142);
+            this.txtTinhtrang.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtTinhtrang.Name = "txtTinhtrang";
+            this.txtTinhtrang.Size = new System.Drawing.Size(212, 27);
+            this.txtTinhtrang.TabIndex = 47;
+            this.txtTinhtrang.Visible = false;
             // 
             // frmThongtinmuonSach
             // 
@@ -353,5 +377,7 @@
         private ComboBox txtManhanvienlap;
         private ComboBox txtIDcuonsach;
         private ComboBox txtSothedocgia;
+        private TextBox txtTinhtrang;
+        private Label label9;
     }
 }
