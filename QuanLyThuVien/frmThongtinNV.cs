@@ -78,7 +78,15 @@ namespace QuanLyThuVien
                     }
                     string SQL = ("update NHANVIEN set MATKHAU='" + txtMatKhau.Text + "',CHUCVU=N'" + txtQuyenHan.Text + "',HO=N'" + txtHo.Text + "',TEN=N'" + txtTen.Text + "',PHAI=N'" + txtGT.Text + "',TRANGTHAI='" + check + "'where TENDANGNHAP='" + TenTK + "'");
                     cls.ThucThiSQLTheoKetNoi(SQL);
-                    cls.LoadData2DataGridView(dataGridView1, "select * from NHANVIEN");
+
+                    if (Main.Quyen == "Quản lý")
+                    {
+                        cls.LoadData2DataGridView(dataGridView1, "select*from NHANVIEN");
+                    }
+                    if (Main.Quyen == "Nhân viên")
+                    {
+                        cls.LoadData2DataGridView(dataGridView1, "select*from NHANVIEN where TENDANGNHAP='" + Main.TenDN + "'");
+                    }
                     MessageBox.Show("Đã Sửa thành công");
                     sua = 0;
                     button2.Enabled = true;
@@ -97,8 +105,16 @@ namespace QuanLyThuVien
                 {
                     string SQL = ("UPDATE NHANVIEN set TRANGTHAI='0' where TENDANGNHAP='" + txtTenTaiKhoan.Text + "'");
                     cls.ThucThiSQLTheoKetNoi(SQL);
-                    cls.LoadData2DataGridView(dataGridView1, "select*from NHANVIEN");
-                    MessageBox.Show("Xóa thành công");
+
+                    if (Main.Quyen == "Quản lý")
+                    {
+                        cls.LoadData2DataGridView(dataGridView1, "select*from NHANVIEN");
+                    }
+                    if (Main.Quyen == "Nhân viên")
+                    {
+                        cls.LoadData2DataGridView(dataGridView1, "select*from NHANVIEN where TENDANGNHAP='" + Main.TenDN + "'");
+                    }
+                MessageBox.Show("Xóa thành công");
                 }
         }
 
