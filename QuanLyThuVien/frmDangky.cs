@@ -23,12 +23,15 @@ namespace QuanLyThuVien
 
         private void button1_Click(object sender, EventArgs e)
         {
+            string tmp;
+            object TDN = cls.layGiaTri("select TENDANGNHAP from NHANVIEN where TENDANGNHAP='" + txtTenTK.Text + "'");
+            tmp = Convert.ToString(TDN);
 
             if (txtTenTK.Text.Length - 1 < 1)
                 MessageBox.Show("Tên tài khoản quá ngắn");
             else
-                if (txtTenTK.Text.Length - 1 > 30)
-                    MessageBox.Show("Tên tài khoản quá dài");
+                if (txtTenTK.Text==tmp)
+                    MessageBox.Show("Tên tài khoản đã tồn tại");
                 else
                     if (txtMatKhau.Text.Length - 1 < 1)
                         MessageBox.Show("Mật khẩu quá ngắn");
@@ -44,7 +47,7 @@ namespace QuanLyThuVien
                                 {
                                     cls.ThucThiSQLTheoKetNoi("insert into NHANVIEN(TENDANGNHAP,MATKHAU,CHUCVU,TRANGTHAI)values('" + txtTenTK.Text + "','" + txtMatKhau.Text + "','Nhân viên','1')");
                                     MessageBox.Show("Tạo tài khoản thành công hãy cập nhật thông tin cho tài khoản");
-                                this.Close();
+                                    this.Close();
                                 }
                                 catch { MessageBox.Show("Không thể tạo được tài khoản"); }
                             }

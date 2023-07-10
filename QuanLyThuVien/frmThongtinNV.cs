@@ -18,8 +18,15 @@ namespace QuanLyThuVien
         }
         Class.clsDatabase cls = new QuanLyThuVien.Class.clsDatabase();
         private void KiemTraTTNhanVien_Load(object sender, EventArgs e)
-        {
+        {   
+            if(Main.Quyen== "Quản lý")
+            {
             cls.LoadData2DataGridView(dataGridView1, "select*from NHANVIEN");
+            }
+            if(Main.Quyen== "Nhân viên")
+            {
+                cls.LoadData2DataGridView(dataGridView1, "select*from NHANVIEN where TENDANGNHAP='"+Main.TenDN+"'");
+            }
             txtMaNV.Enabled = txtTenTaiKhoan.Enabled = txtQuyenHan.Enabled = false;
         }
 		

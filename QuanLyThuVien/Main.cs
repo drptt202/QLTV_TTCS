@@ -60,6 +60,7 @@ namespace QuanLyThuVien
                         tìmKiếmToolStripMenuItem.Enabled = true;
                         tìmKiếmSáchToolStripMenuItem.Enabled = true;
                         tìmKiếmBáoTạpChíToolStripMenuItem.Enabled = true;
+                        KiêmTratoolStripMenuItem1.Enabled = true;
                         tìmKiếmĐGToolStripMenuItem.Enabled = true;
                         cậpNhậtToolStripMenuItem.Enabled = true;
                         mượnSáchToolStripMenuItem.Enabled = true;
