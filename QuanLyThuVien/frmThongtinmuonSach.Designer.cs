@@ -30,6 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTinhtrang = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtManhanvienlap = new System.Windows.Forms.ComboBox();
             this.txtIDcuonsach = new System.Windows.Forms.ComboBox();
             this.txtSothedocgia = new System.Windows.Forms.ComboBox();
@@ -51,8 +53,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtTinhtrang = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -96,6 +96,26 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nhập đầy đủ các thông tin";
+            // 
+            // txtTinhtrang
+            // 
+            this.txtTinhtrang.Location = new System.Drawing.Point(549, 142);
+            this.txtTinhtrang.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.txtTinhtrang.Name = "txtTinhtrang";
+            this.txtTinhtrang.Size = new System.Drawing.Size(212, 27);
+            this.txtTinhtrang.TabIndex = 47;
+            this.txtTinhtrang.Visible = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(458, 142);
+            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 20);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "Tình trạng :";
+            this.label9.Visible = false;
             // 
             // txtManhanvienlap
             // 
@@ -159,6 +179,7 @@
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 19;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             // 
             // label5
             // 
@@ -169,6 +190,7 @@
             this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 18;
             this.label5.Text = "Đã trả :";
+            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -179,6 +201,7 @@
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 17;
             this.label4.Text = "Ngày trả :";
+            this.label4.Visible = false;
             // 
             // txtNgaytra
             // 
@@ -187,6 +210,7 @@
             this.txtNgaytra.Name = "txtNgaytra";
             this.txtNgaytra.Size = new System.Drawing.Size(246, 27);
             this.txtNgaytra.TabIndex = 12;
+            this.txtNgaytra.Visible = false;
             // 
             // txtNgaymuon
             // 
@@ -307,26 +331,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1026, 323);
             this.dataGridView1.TabIndex = 5;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(458, 142);
-            this.label9.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 20);
-            this.label9.TabIndex = 46;
-            this.label9.Text = "Tình trạng :";
-            this.label9.Visible = false;
-            // 
-            // txtTinhtrang
-            // 
-            this.txtTinhtrang.Location = new System.Drawing.Point(549, 142);
-            this.txtTinhtrang.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.txtTinhtrang.Name = "txtTinhtrang";
-            this.txtTinhtrang.Size = new System.Drawing.Size(212, 27);
-            this.txtTinhtrang.TabIndex = 47;
-            this.txtTinhtrang.Visible = false;
             // 
             // frmThongtinmuonSach
             // 

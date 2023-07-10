@@ -12,7 +12,7 @@ namespace QuanLyThuVien.Class
     class clsDatabase
     {
         //Khai báo các chuỗi kết nối và các đối tượng
-        public string strConnect = @"Data Source=MY-FLAPTOP;Initial Catalog=QLTV_TTCS;User ID=sa;Password=123123;Integrated Security=True";
+        public string strConnect = @"Data Source=MY-FLAPTOP;Initial Catalog=QLTV_TTCS;Integrated Security=True";
         public SqlConnection sqlCon;
         public SqlCommand sqlCom;
         public SqlDataReader sqlRea;

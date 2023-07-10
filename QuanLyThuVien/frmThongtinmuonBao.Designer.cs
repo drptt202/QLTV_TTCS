@@ -204,6 +204,7 @@
             this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 33;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             // 
             // label5
             // 
@@ -214,6 +215,7 @@
             this.label5.Size = new System.Drawing.Size(57, 20);
             this.label5.TabIndex = 32;
             this.label5.Text = "Đã trả :";
+            this.label5.Visible = false;
             // 
             // label4
             // 
@@ -224,6 +226,7 @@
             this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "Ngày trả :";
+            this.label4.Visible = false;
             // 
             // txtNgaytra
             // 
@@ -232,6 +235,7 @@
             this.txtNgaytra.Name = "txtNgaytra";
             this.txtNgaytra.Size = new System.Drawing.Size(246, 27);
             this.txtNgaytra.TabIndex = 30;
+            this.txtNgaytra.Visible = false;
             // 
             // txtNgaymuon
             // 

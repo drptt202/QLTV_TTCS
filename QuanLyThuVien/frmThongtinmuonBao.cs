@@ -111,6 +111,7 @@ namespace QuanLyThuVien
                 sua = 1;
                 button1.Enabled = false;
                 button3.Enabled = false;
+                label4.Visible = label5.Visible = txtNgaytra.Visible = checkBox1.Visible = true;
             }
             else
             {
@@ -132,8 +133,8 @@ namespace QuanLyThuVien
                     cls.LoadData2DataGridView(dataGridView1, "select *from PHIEUMUONBAO");
                     button1.Enabled = true;
                     button3.Enabled = true;
+                    label4.Visible = label5.Visible = txtNgaytra.Visible = checkBox1.Visible = false;
                     MessageBox.Show("Sửa thành công");
-                    sua = 0;
                 }
                 catch { MessageBox.Show("Sửa thất bại"); };
             }
